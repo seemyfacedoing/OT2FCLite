@@ -1,0 +1,73 @@
+OT2FCLite 1.0.0 — manual install package
+=========================================
+
+This archive contains ONLY the mod itself: Lua scripts and plain-text config
+files. No DLLs, no executables, no installers.
+
+UE4SS is NOT included. Install it first from the official release:
+    https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1
+UE4SS is MIT licensed (Copyright (c) 2022 Narknon). This package ships none of it.
+
+
+REQUIREMENTS
+------------
+OCTOPATH TRAVELER II v1.1.0 / build 13399590 (Steam), UE4SS v3.0.1.
+
+
+INSTALL
+-------
+1. Install UE4SS v3.0.1 into:
+       ...\steamapps\common\Octopath_Traveler2\Octopath_Traveler2\Binaries\Win64\
+
+2. Open UE4SS-settings.ini in that folder and set:
+       [General]
+       bUseUObjectArrayCache = false
+
+       [Debug]
+       GraphicsAPI = dx11
+       GuiConsoleEnabled = 0
+       GuiConsoleVisible = 0
+
+3. Copy the OT2FCLite folder from this archive into:
+       ...\Binaries\Win64\Mods\OT2FCLite
+   (the result must be ...\Mods\OT2FCLite\Scripts\main.lua)
+
+4. Open ...\Binaries\Win64\Mods\mods.txt and add this line ABOVE "Keybinds : 1":
+       OT2FCLite : 1
+
+5. Start the game and check ...\Binaries\Win64\UE4SS.log for:
+       [OT2FCLite] F5 party swap BOUND (swapkey=1)
+       [OT2FCLite] exp hook -> true
+
+
+HOW TO USE
+----------
+1. In the field, press F5. The party data is swapped at this moment.
+2. Press Y to open the game's own party screen - it already shows the new line-up -
+   then close it. This is where the game rebuilds the field characters.
+3. Talk to an NPC: the new members' path actions are now offered and work normally.
+   Press F5 and Y again to swap back.
+
+Do not skip step 2.
+
+
+CONFIGURATION (Mods\OT2FCLite\, re-read while the game is running)
+------------------------------------------------------------------
+swapkey.txt    1 = bind the swap to F5 (default), 0 = do not bind
+exphook.txt    1 = share EXP with the bench (default), 0 = off
+expratio.txt   EXP share ratio in percent (100 = full)
+sharejp.txt    1 = share JP (default), 0 = off
+jpratio.txt    JP share ratio in percent
+hooktarget.txt must stay "none" (other values are development leftovers and crash the game)
+
+
+WARNINGS
+--------
+- Tested on v1.1.0 / build 13399590 only. A game update may break it.
+- The swap really changes your party and persists if you save afterwards.
+- Party order changes (reserves fill in ascending character ID), so the leader can change.
+- Only travellers you have recruited take part; unrecruited slots are skipped.
+- Achievements: not verified.
+- Back up your saves: Documents\My Games\Octopath_Traveler2\Steam\<SteamID>\SaveGames\
+
+Not affiliated with Square Enix or Acquire. This package contains no game assets.
