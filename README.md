@@ -83,9 +83,13 @@ All plain text, in `Mods\OT2FCLite\`, re-read while the game is running:
 
 ## 中文说明
 
+## 中文说明
+
 按 `F5` 换队 → 按手柄 `Y` 打开游戏自带队伍界面 → 关闭 → 新队员的天赋技能在 NPC 处可用。
-未上场成员共享 EXP / JP。详见 [INSTALL.txt](INSTALL.txt)。本仓库只含 Lua 脚本与配置，
-不含任何游戏资源；安装包中的 UE4SS 为 MIT 许可的第三方组件。
+未上场成员共享 EXP / JP。本仓库只含 Lua 脚本与配置，不含任何游戏资源；安装包中的 UE4SS
+为 MIT 许可的第三方组件。
+
+📖 **完整中文手册：[docs/中文使用手册.md](docs/中文使用手册.md)** — 安装、使用、配置、常见问题、已知限制、技术说明。
 
 ## License
 
